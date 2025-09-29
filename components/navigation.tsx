@@ -4,12 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,32 +29,16 @@ export function Navigation() {
             <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
               About
             </Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                Services <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href="/services">All Services</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/services/ai-platform">AI Platform</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/services/consulting">Consulting</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/services/finance-tools">Finance Tools</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Link href="/process" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Process
+             <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Services
             </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+            {/* <Link href="/process" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Process
+            </Link> */}
+            <Link href="/caseStudy" className="text-gray-700 hover:text-blue-600 transition-colors">
               Case Studies
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 transition-colors">
               Blog
             </Link>
             <Link href="/careers" className="text-gray-700 hover:text-blue-600 transition-colors">
