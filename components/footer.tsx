@@ -3,9 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import {
-  Twitter,
-  Linkedin,
-  Github,
   Mail,
   Phone,
   MapPin,
@@ -70,7 +67,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Mail className="h-4 w-4" />
-                <span>operations@savant-solutions.com</span>
+                <span>info@savant-solutions.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4" />
@@ -82,7 +79,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <p className="text-sm text-gray-400">
                 Subscribe to our newsletter
               </p>
@@ -95,7 +92,7 @@ export function Footer() {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

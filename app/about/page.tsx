@@ -193,9 +193,6 @@ export default function About() {
             we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/careers">View Open Positions</Link>
-            </Button>
             <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white text-blue-600">
               <Link href="/contact">Get in Touch</Link>
             </Button>

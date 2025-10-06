@@ -13,9 +13,9 @@ import {
   MapPin,
   Clock,
   Send,
-  Calendar,
-  MessageSquare,
-  Users,
+  Loader2,
+  CheckCircle,
+  XCircle,
 } from "lucide-react";
 
 export default function Contact() {
@@ -25,11 +25,44 @@ export default function Contact() {
     company: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus('idle');
+  setErrorMessage('');
+
+  try {
+    const response = await fetch('/api/send_mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setSubmitStatus('success');
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } else {
+      setSubmitStatus('error');
+      setErrorMessage(data.error || 'Failed to send message. Please try again.');
+    }
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    setSubmitStatus('error');
+    setErrorMessage('Network error. Please check your connection and try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,8 +100,6 @@ export default function Contact() {
       {/* Contact Options */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="space-y-8">
@@ -90,6 +121,36 @@ export default function Contact() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
+                  {/* Status Messages */}
+                  {submitStatus === "success" && (
+                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-5 w-5 text-green-600" />
+                        <span className="text-green-800 font-medium">
+                          Message sent successfully!
+                        </span>
+                      </div>
+                      <p className="text-green-600 text-sm mt-1 ml-7">
+                        Thank you for your message. We'll get back to you within
+                        24 hours.
+                      </p>
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <div className="flex items-center space-x-2">
+                        <XCircle className="h-5 w-5 text-red-600" />
+                        <span className="text-red-800 font-medium">
+                          Failed to send message
+                        </span>
+                      </div>
+                      <p className="text-red-600 text-sm mt-1 ml-7">
+                        {errorMessage}
+                      </p>
+                    </div>
+                  )}
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
@@ -101,6 +162,7 @@ export default function Contact() {
                           onChange={handleChange}
                           placeholder="John Doe"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                       <div className="space-y-2">
@@ -113,6 +175,7 @@ export default function Contact() {
                           onChange={handleChange}
                           placeholder="john@company.com"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -125,6 +188,7 @@ export default function Contact() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Your Company"
+                        disabled={isSubmitting}
                       />
                     </div>
 
@@ -138,12 +202,32 @@ export default function Contact() {
                         placeholder="Tell us about your project or how we can help..."
                         rows={6}
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
-                      Send Message <Send className="ml-2 h-4 w-4" />
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Sending Message...
+                        </>
+                      ) : (
+                        <>
+                          Send Message <Send className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </Button>
+
+                    <p className="text-xs text-gray-500 text-center">
+                      By submitting this form, you agree to our privacy policy
+                      and allow us to contact you regarding your inquiry.
+                    </p>
                   </form>
                 </CardContent>
               </Card>
@@ -175,7 +259,7 @@ export default function Contact() {
                         For general inquiries and support
                       </p>
                       <a
-                        href="mailto:hello@savant.com"
+                        href="mailto:info@savant-solutions.com"
                         className="text-blue-600 hover:underline"
                       >
                         info@savant-solutions.com
