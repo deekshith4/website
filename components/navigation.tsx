@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,36 +15,61 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">S</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">Savant</span>
+            <Image
+              src="/images/logo.jpeg"
+              alt="Tracient Logo"
+              width={40}
+              height={40}
+              className="w-30 h-30 rounded-lg"
+            />
+            <span className="text-xl font-bold text-gray-900">Tracient</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               About
             </Link>
-             <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+            {/* <Link
+              href="/services"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Services
-            </Link>
+            </Link> */}
             {/* <Link href="/process" className="text-gray-700 hover:text-blue-600 transition-colors">
               Process
             </Link> */}
-            <Link href="/caseStudy" className="text-gray-700 hover:text-blue-600 transition-colors">
+            {/* <Link
+              href="/caseStudy"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Case Studies
-            </Link>
-            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 transition-colors">
+            </Link> */}
+            {/* <Link
+              href="/blogs"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Blog
-            </Link>
-            <Link href="/careers" className="text-gray-700 hover:text-blue-600 transition-colors">
+            </Link> */}
+            {/* <Link
+              href="/careers"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Careers
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            </Link> */}
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
               Contact
             </Link>
           </div>
@@ -62,7 +87,11 @@ export function Navigation() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -71,28 +100,52 @@ export function Navigation() {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 About
               </Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Services
               </Link>
-              <Link href="/process" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/process"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Process
               </Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/case-studies"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Case Studies
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Blog
               </Link>
-              <Link href="/careers" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/careers"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Careers
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Contact
               </Link>
               <Button asChild className="w-fit">
