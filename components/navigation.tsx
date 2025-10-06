@@ -39,33 +39,7 @@ export function Navigation() {
             >
               About
             </Link>
-            {/* <Link
-              href="/services"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Services
-            </Link> */}
-            {/* <Link href="/process" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Process
-            </Link> */}
-            {/* <Link
-              href="/caseStudy"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Case Studies
-            </Link> */}
-            {/* <Link
-              href="/blogs"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Blog
-            </Link> */}
-            {/* <Link
-              href="/careers"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Careers
-            </Link> */}
+           
             <Link
               href="/contact"
               className="text-gray-700 hover:text-blue-600 transition-colors"
@@ -112,36 +86,7 @@ export function Navigation() {
               >
                 About
               </Link>
-              <Link
-                href="/services"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="/process"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Process
-              </Link>
-              <Link
-                href="/case-studies"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Case Studies
-              </Link>
-              <Link
-                href="/blog"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/careers"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                Careers
-              </Link>
+             
               <Link
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 transition-colors"

@@ -32,37 +32,41 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  setSubmitStatus('idle');
-  setErrorMessage('');
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
 
-  try {
-    const response = await fetch('/api/send_mail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("/api/send_mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok) {
-      setSubmitStatus('success');
-      setFormData({ name: "", email: "", company: "", message: "" });
-    } else {
-      setSubmitStatus('error');
-      setErrorMessage(data.error || 'Failed to send message. Please try again.');
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", company: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(
+          data.error || "Failed to send message. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setSubmitStatus("error");
+      setErrorMessage(
+        "Network error. Please check your connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    console.error('Failed to send email:', error);
-    setSubmitStatus('error');
-    setErrorMessage('Network error. Please check your connection and try again.');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

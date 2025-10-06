@@ -20,214 +20,214 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
-  {/* Background Elements */}
-  <div className="absolute inset-0">
-    <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20"></div>
-    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-600/20"></div>
-    {/* Floating Particles */}
-    <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-  </div>
-
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 lg:min-h-screen">
-      {/* Left Content */}
-      <div className="space-y-8">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-white/20">
-          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-          AI-POWERED PLATFORM
+      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-600/20"></div>
+          {/* Floating Particles */}
+          <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-          Transform your business with{" "}
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Tracient
-          </span>
-        </h1>
-
-        {/* Description */}
-        <p className="text-xl text-purple-100 leading-relaxed">
-          At Savant Solutions, we understand the critical importance of
-          keeping your operations running smoothly and eliminating
-          unplanned downtime. That's why we built Tracient specifically
-          for small and medium-sized businesses, guided by four core
-          principles:
-        </p>
-
-        {/* Core Principles */}
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { number: "01", title: "Maximize equipment uptime" },
-              { number: "02", title: "Improve yield" },
-              { number: "03", title: "Enhance product quality" },
-              { number: "04", title: "Ensure data traceability" },
-            ].map((principle, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300"
-              >
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <span className="text-white text-sm font-bold">
-                    {principle.number}
-                  </span>
-                </div>
-                <span className="text-purple-100 font-medium group-hover:text-white transition-colors">
-                  {principle.title}
-                </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 lg:min-h-screen">
+            {/* Left Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-white/20">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                AI-POWERED PLATFORM
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Machine Learning Highlight */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-              <Brain className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2">
-                Powered by Advanced Machine Learning
-              </h4>
-              <p className="text-purple-100 text-sm leading-relaxed">
-                Powered by our patent-pending machine learning platform,
-                Tracient ingests and analyzes millions of real-time data
-                points from industrial assets. It detects anomalies,
-                identifies potential failure modes early, and delivers
-                actionable insights directly to technicians—enabling
-                predictive maintenance and fast, informed responses that
-                prevent costly disruptions.
+              {/* Main Heading */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                Transform your business with{" "}
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  Tracient
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-xl text-purple-100 leading-relaxed">
+                At Savant Solutions, we understand the critical importance of
+                keeping your operations running smoothly and eliminating
+                unplanned downtime. That's why we built Tracient specifically
+                for small and medium-sized businesses, guided by four core
+                principles:
               </p>
+
+              {/* Core Principles */}
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { number: "01", title: "Maximize equipment uptime" },
+                    { number: "02", title: "Improve yield" },
+                    { number: "03", title: "Enhance product quality" },
+                    { number: "04", title: "Ensure data traceability" },
+                  ].map((principle, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
+                        <span className="text-white text-sm font-bold">
+                          {principle.number}
+                        </span>
+                      </div>
+                      <span className="text-purple-100 font-medium group-hover:text-white transition-colors">
+                        {principle.title}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Machine Learning Highlight */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Brain className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      Powered by Advanced Machine Learning
+                    </h4>
+                    <p className="text-purple-100 text-sm leading-relaxed">
+                      Powered by our patent-pending machine learning platform,
+                      Tracient ingests and analyzes millions of real-time data
+                      points from industrial assets. It detects anomalies,
+                      identifies potential failure modes early, and delivers
+                      actionable insights directly to technicians—enabling
+                      predictive maintenance and fast, informed responses that
+                      prevent costly disruptions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+                >
+                  <Link href="/contact" className="flex items-center gap-2">
+                    Book a Demo
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Side - 6 Image Gallery with Better Spacing */}
+            <div className="relative flex items-center justify-center h-full min-h-[600px] lg:min-h-[700px]">
+              {/* Main Image Grid - 2x3 Layout */}
+              <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
+                {/* Row 1 */}
+                <div className="relative group">
+                  <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
+                    <Image
+                      src="/images/img_1.png"
+                      alt="AI Analytics"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="relative group ">
+                  <div className="absolute  bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-purple-500/25 h-40">
+                    <Image
+                      src="/images/img_2.png"
+                      alt="Real-time Monitoring"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="relative group ">
+                  <div className="absolute bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-green-500/25 h-40">
+                    <Image
+                      src="/images/img_3.png"
+                      alt="Predictive Analytics"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Row 2 */}
+                <div className="relative group ">
+                  <div className="absolute  bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-orange-500/25 h-40">
+                    <Image
+                      src="/images/img_4.png"
+                      alt="Data Visualization"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="relative group ">
+                  <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
+                    <Image
+                      src="/images/img_5.png"
+                      alt="Machine Learning"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute  bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-pink-500/25 h-40">
+                    <Image
+                      src="/images/img_6.png"
+                      alt="IoT Integration"
+                      width={200}
+                      height={160}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Icons - Adjusted Positions */}
+              <div className="absolute top-20 right-4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl shadow-2xl transform rotate-12 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
+                <TrendingUp className="h-6 w-6 text-white" />
+              </div>
+
+              <div className="absolute bottom-20 left-4 w-14 h-14 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl shadow-2xl transform -rotate-6 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
+                <Shield className="h-5 w-5 text-white" />
+              </div>
+
+              <div className="absolute top-1/2 -right-11 w-12 h-12 bg-gradient-to-r from-orange-400 to-red-400 rounded-lg shadow-2xl transform rotate-45 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
+                <Zap className="h-4 w-4 text-white" />
+              </div>
+
+              {/* Background Grid */}
+              <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black,transparent)]"></div>
             </div>
           </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-          <Button
-            size="lg"
-            asChild
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
-          >
-            <Link href="/contact" className="flex items-center gap-2">
-              Book a Demo
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-
-      {/* Right Side - 6 Image Gallery with Better Spacing */}
-      <div className="relative flex items-center justify-center h-full min-h-[600px] lg:min-h-[700px]">
-        {/* Main Image Grid - 2x3 Layout */}
-        <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
-          {/* Row 1 */}
-          <div className="relative group">
-            <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
-              <Image
-                src="/images/img_1.png"
-                alt="AI Analytics"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="relative group ">
-            <div className="absolute  bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-purple-500/25 h-40">
-              <Image
-                src="/images/img_2.png"
-                alt="Real-time Monitoring"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="relative group ">
-            <div className="absolute bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-green-500/25 h-40">
-              <Image
-                src="/images/img_3.png"
-                alt="Predictive Analytics"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          {/* Row 2 */}
-          <div className="relative group ">
-            <div className="absolute  bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-orange-500/25 h-40">
-              <Image
-                src="/images/img_4.png"
-                alt="Data Visualization"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="relative group ">
-            <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
-              <Image
-                src="/images/img_5.png"
-                alt="Machine Learning"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="relative group">
-            <div className="absolute  bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-pink-500/25 h-40">
-              <Image
-                src="/images/img_6.png"
-                alt="IoT Integration"
-                width={200}
-                height={160}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Icons - Adjusted Positions */}
-        <div className="absolute top-20 right-4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl shadow-2xl transform rotate-12 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
-          <TrendingUp className="h-6 w-6 text-white" />
-        </div>
-
-        <div className="absolute bottom-20 left-4 w-14 h-14 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl shadow-2xl transform -rotate-6 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
-          <Shield className="h-5 w-5 text-white" />
-        </div>
-
-        <div className="absolute top-1/2 -right-11 w-12 h-12 bg-gradient-to-r from-orange-400 to-red-400 rounded-lg shadow-2xl transform rotate-45 flex items-center justify-center hover:rotate-0 transition-transform duration-300 border border-white/20">
-          <Zap className="h-4 w-4 text-white" />
-        </div>
-
-        {/* Background Grid */}
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black,transparent)]"></div>
-      </div>
-    </div>
-  </div>
-
-  {/* Bottom Gradient Border */}
-  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
-</section>
+        {/* Bottom Gradient Border */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      </section>
 
       {/* What We Do Section */}
       <section className="py-20 bg-white">
@@ -256,7 +256,7 @@ export default function Home() {
                   decision-making, and unlock new revenue streams for your
                   business.
                 </p>
-                <Button
+                {/* <Button
                   variant="ghost"
                   asChild
                   className="group-hover:text-blue-600"
@@ -264,7 +264,7 @@ export default function Home() {
                   <Link href="/services/ai-platform">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
 
@@ -306,7 +306,7 @@ export default function Home() {
                   digital transformation and maximize your technology
                   investments.
                 </p>
-                <Button
+                {/* <Button
                   variant="ghost"
                   asChild
                   className="group-hover:text-green-600"
@@ -314,7 +314,7 @@ export default function Home() {
                   <Link href="/services/consulting">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </div>
@@ -371,13 +371,13 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Button size="lg" variant="outline" asChild>
               <Link href="/process">
                 View Full Process <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -475,7 +475,7 @@ export default function Home() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-           Revolutionize your operations with our AI-powered solutions.
+            Revolutionize your operations with our AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="text-lg px-8 py-6">
