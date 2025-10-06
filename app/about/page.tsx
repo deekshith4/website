@@ -29,7 +29,7 @@ export default function About() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Founded in 2020, Savant has been at the forefront of AI innovation, 
+              Founded in 2022, Savant has been at the forefront of AI innovation, 
               helping businesses transform their operations and achieve unprecedented growth.
             </p>
           </div>
@@ -95,29 +95,19 @@ export default function About() {
           <div className="space-y-8">
             {[
               {
-                year: '2020',
+                year: '2022',
                 title: 'Company Founded',
                 description: 'Started with a vision to make AI accessible to all businesses'
               },
               {
-                year: '2021',
+                year: '2024',
                 title: 'First AI Platform Launch',
                 description: 'Released our flagship AI platform serving 50+ early adopters'
               },
               {
-                year: '2022',
-                title: 'Series A Funding',
+                year: '2025',
+                title: 'First Customer Acquired',
                 description: 'Raised $10M to accelerate product development and team growth'
-              },
-              {
-                year: '2023',
-                title: '500+ Clients Milestone',
-                description: 'Reached 500 satisfied clients across 20+ industries'
-              },
-              {
-                year: '2024',
-                title: 'Global Expansion',
-                description: 'Opened offices in Europe and Asia, serving clients worldwide'
               }
             ].map((milestone, index) => (
               <div key={index} className="flex items-center space-x-8">
@@ -140,67 +130,6 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Leadership Team</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Meet the visionaries driving innovation and growth at Savant
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Alex Rodriguez',
-                role: 'CEO & Co-Founder',
-                bio: 'Former VP of AI at Google, 15+ years in tech leadership. PhD in Computer Science from Stanford.',
-                image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
-              },
-              {
-                name: 'Sarah Kim',
-                role: 'CTO & Co-Founder',
-                bio: 'Ex-Principal Engineer at Microsoft Azure. Expert in distributed systems and machine learning infrastructure.',
-                image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400'
-              },
-              {
-                name: 'David Chen',
-                role: 'VP of Product',
-                bio: 'Former Product Lead at Stripe. Specializes in building scalable B2B platforms and user experience design.',
-                image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400'
-              }
-            ].map((member, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                    <p className="text-blue-600 font-medium">{member.role}</p>
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                  <div className="flex justify-center space-x-3">
-                    <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">
-                      <Mail className="h-5 w-5" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Culture & Awards */}
       <section className="py-20 bg-gray-50">
@@ -248,34 +177,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Awards */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900">Recognition & Awards</h2>
-                <p className="text-xl text-gray-600">
-                  Industry recognition for our innovation and impact.
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                {[
-                  { year: '2024', award: 'Best AI Platform', org: 'TechCrunch Disrupt' },
-                  { year: '2023', award: 'Startup of the Year', org: 'AI Innovation Awards' },
-                  { year: '2023', award: 'Top 50 AI Companies', org: 'Forbes' },
-                  { year: '2022', award: 'Best B2B Solution', org: 'SaaS Awards' }
-                ].map((award, index) => (
-                  <Card key={index} className="p-4 border-l-4 border-l-blue-600">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <h3 className="font-semibold text-gray-900">{award.award}</h3>
-                        <p className="text-sm text-gray-600">{award.org}</p>
-                      </div>
-                      <Badge variant="secondary">{award.year}</Badge>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
+   
           </div>
         </div>
       </section>
@@ -294,7 +196,7 @@ export default function About() {
             <Button size="lg" variant="secondary" asChild>
               <Link href="/careers">View Open Positions</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white text-blue-600">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>
