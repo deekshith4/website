@@ -16,7 +16,6 @@ import {
   Loader2,
   CheckCircle,
   XCircle,
-  Cpu,
 } from "lucide-react";
 
 export default function Contact() {
@@ -88,7 +87,7 @@ export default function Contact() {
               Get in Touch
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-              Let's Build Something{" "}
+              Let&apos;s Build Something{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Amazing Together
               </span>
@@ -113,7 +112,7 @@ export default function Contact() {
                   Send us a Message
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Fill out the form below and we'll get back to you within 24
+                  Fill out the form below and we&apos;ll get back to you within 24
                   hours.
                 </p>
               </div>
@@ -136,7 +135,7 @@ export default function Contact() {
                         </span>
                       </div>
                       <p className="text-green-600 text-sm mt-1 ml-7">
-                        Thank you for your message. We'll get back to you within
+                        Thank you for your message. We&apos;ll get back to you within
                         24 hours.
                       </p>
                     </div>
@@ -342,7 +341,7 @@ export default function Contact() {
                         Business Hours
                       </h3>
                       <p className="text-gray-600 text-sm mb-2">
-                        When we're available
+                        When we&apos;re available
                       </p>
                       <div className="text-orange-600 text-sm">
                         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>

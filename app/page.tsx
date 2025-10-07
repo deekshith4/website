@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,35 +7,28 @@ import {
   Brain,
   TrendingUp,
   Shield,
-  CircleCheck as CheckCircle,
   Zap,
 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-600/20"></div>
-          {/* Floating Particles */}
           <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 lg:min-h-screen">
-            {/* Left Content */}
             <div className="space-y-8">
-              {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-white/20">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
                 AI-POWERED PLATFORM
               </div>
 
-              {/* Main Heading */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                 Transform your business with{" "}
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -45,16 +36,14 @@ export default function Home() {
                 </span>
               </h1>
 
-              {/* Description */}
               <p className="text-xl text-purple-100 leading-relaxed">
                 At Savant Solutions, we understand the critical importance of
                 keeping your operations running smoothly and eliminating
-                unplanned downtime. That's why we built Tracient specifically
+                unplanned downtime. That&apos;s why we built Tracient specifically
                 for small and medium-sized businesses, guided by four core
                 principles:
               </p>
 
-              {/* Core Principles */}
               <div className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
@@ -80,7 +69,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Machine Learning Highlight */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -103,7 +91,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <Button
                   size="lg"
@@ -118,9 +105,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Side - 6 Image Gallery with Better Spacing */}
             <div className="relative flex items-center justify-center h-full min-h-[600px] lg:min-h-[700px]">
-              {/* Main Image Grid - 2x3 Layout */}
               <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
                 {/* Row 1 */}
                 <div className="relative group">
@@ -321,7 +306,7 @@ export default function Home() {
                   Ready to begin?
                 </div>
                 <div className="text-lg font-semibold text-gray-900">
-                  Let's discuss your project
+                  Let&apos;s discuss your project
                 </div>
               </div>
               <Link href="/contact">

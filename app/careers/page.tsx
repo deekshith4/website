@@ -146,7 +146,7 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
             <Badge variant="secondary" className="mx-auto w-fit bg-green-100 text-green-700">
-              We're Hiring!
+              We&apos;re Hiring!
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
               Build the Future{' '}
@@ -177,7 +177,7 @@ export default function CareersPage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Why Join Our Team?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're building more than just products - we're building a better way to work
+              We&apos;re building more than just products - we&apos;re building a better way to work
             </p>
           </div>
 
@@ -272,7 +272,7 @@ export default function CareersPage() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">
-              Don't see the perfect role? We're always looking for talented people.
+              Don&apos;t see the perfect role? We&apos;re always looking for talented people.
             </p>
             <Button variant="outline" size="lg">
               Submit General Application
@@ -387,7 +387,7 @@ export default function CareersPage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Meet Our Team</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Get to know the people you'll be working with
+              Get to know the people you&apos;ll be working with
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { 
@@ -15,7 +15,7 @@ import {
   Database,
   Workflow,
   ArrowRight,
-  CheckCircle2,
+  
   Play
 } from 'lucide-react';
 
@@ -151,7 +151,7 @@ export default function ProductsServices() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Our team specializes in building tailored solutions for unique business challenges. 
-          Let's discuss how we can create something extraordinary together.
+          Let&apos;s discuss how we can create something extraordinary together.
         </p>
         <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
           Schedule Consultation

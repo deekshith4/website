@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: "Savant - AI-Powered Business Solutions",
   description:
     "Transform your business with cutting-edge AI solutions, expert consulting, and innovative technology platforms.",
+  icons: {
+    icon: "/images/logo.jpeg",
+    apple: "/images/logo.jpeg"
+  },
 };
 
 export default function RootLayout({

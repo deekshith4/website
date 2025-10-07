@@ -224,8 +224,8 @@ export default function About() {
             Join Our Mission
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Whether you're looking to transform your business or join our team,
-            we'd love to hear from you.
+            Whether you&apos;re looking to transform your business or join our team,
+            we&apos;d love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

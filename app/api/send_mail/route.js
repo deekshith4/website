@@ -29,7 +29,7 @@ export async function POST(request) {
       );
     }
 
-    if (!process.env.APP_USER || !process.env.APP_PASSWORD) {
+    if (!process.env.APP_USER || !process.env.APP_PASSWORD || !process.env.RECEIVER_MAIL) {
       console.error("Missing email configuration");
       return NextResponse.json(
         { error: "Email service is not configured properly" },
@@ -63,7 +63,7 @@ export async function POST(request) {
         name: "Contact Form",
         address: process.env.APP_USER,
       },
-      to: "kdeeskhith68@gmail.com",
+      to: process.env.RECEIVER_MAIL,
       subject: `New Contact Form Submission from ${name.trim()}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
