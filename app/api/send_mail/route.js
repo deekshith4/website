@@ -63,7 +63,7 @@ export async function POST(request) {
         name: "Contact Form",
         address: process.env.APP_USER,
       },
-      to: "info@savant-solutions.com",
+      to: "kdeeskhith68@gmail.com",
       subject: `New Contact Form Submission from ${name.trim()}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

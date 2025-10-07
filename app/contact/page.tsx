@@ -16,6 +16,7 @@ import {
   Loader2,
   CheckCircle,
   XCircle,
+  Cpu,
 } from "lucide-react";
 
 export default function Contact() {
@@ -204,7 +205,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell us about your project or how we can help..."
-                        rows={6}
+                        rows={14}
                         required
                         disabled={isSubmitting}
                       />
@@ -299,20 +300,34 @@ export default function Contact() {
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-6 w-6 text-green-600" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">
-                        Visit Us
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 mb-3">
+                        Our Locations
                       </h3>
-                      <p className="text-gray-600 text-sm mb-2">
-                        Our headquarters
-                      </p>
-                      <address className="text-green-600 not-italic">
-                        F404, Tower F, AdarshLakefront Apartment,
-                        <br />
-                        Bellandur, Bangalore - 560103
-                        <br />
-                        Karnataka
-                      </address>
+
+                      <div className="space-y-4">
+                        <div>
+                          <p className="font-medium text-gray-800 text-sm mb-1">
+                            Headquarters
+                          </p>
+                          <address className="text-green-600 not-italic text-sm">
+                            Michigan, USA
+                          </address>
+                        </div>
+
+                        <div className="border-t pt-3">
+                          <p className="font-medium text-gray-800 text-sm mb-1">
+                            R&D Center
+                          </p>
+                          <address className="text-green-600 not-italic text-sm">
+                            F-404, Tower F, AdarshLakefront Apartment,
+                            <br />
+                            Bellandur, Bangalore - 560103
+                            <br />
+                            Karnataka, India
+                          </address>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Card>
@@ -340,33 +355,32 @@ export default function Contact() {
               </div>
 
               {/* Map placeholder */}
-              <Card className="p-6">
-                <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
-                  <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.963734447534!2d77.6811112757792!3d12.918096987888007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzA1LjIiTiA3N8KwNDAnNTkuMiJF!5e0!3m2!1sen!2sin!4v1700000000000"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Office Location"
-                    ></iframe>
-                  </div>
-                </div>
-                <div className="mt-4 text-center">
-                  <p className="text-gray-500 font-medium">
-                    SavantEdge Infotech Pvt. Ltd
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    F404, Tower F, Adarsh Lakefront Apartment, Bellandur,
-                    Bangalore
-                  </p>
-                </div>
-              </Card>
             </div>
           </div>
+          <Card className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3 p-6">
+            <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
+              <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.963734447534!2d77.6811112757792!3d12.918096987888007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzA1LjIiTiA3N8KwNDAnNTkuMiJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Office Location"
+                ></iframe>
+              </div>
+            </div>
+            <div className="mt-4 text-center">
+              <p className="text-gray-500 font-medium">
+                SavantEdge Infotech Pvt. Ltd
+              </p>
+              <p className="text-sm text-gray-400">
+                F-404, Tower F, Adarsh Lakefront Apartment, Bellandur, Bangalore
+              </p>
+            </div>
+          </Card>
         </div>
       </section>
 

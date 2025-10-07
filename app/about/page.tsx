@@ -113,19 +113,19 @@ export default function About() {
                 year: "2022",
                 title: "Company Founded",
                 description:
-                  "Started with a vision to make AI accessible to all businesses",
+                  "",
               },
               {
                 year: "2024",
                 title: "First AI Platform Launch",
                 description:
-                  "Released our flagship AI platform serving 50+ early adopters",
+                  "",
               },
               {
                 year: "2025",
                 title: "First Customer Acquired",
                 description:
-                  "Raised $10M to accelerate product development and team growth",
+                  "",
               },
             ].map((milestone, index) => (
               <div key={index} className="flex items-center space-x-8">

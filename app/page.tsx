@@ -14,6 +14,7 @@ import {
   Star,
   Quote,
   Zap,
+  Sparkles,
 } from "lucide-react";
 
 export default function Home() {
@@ -230,93 +231,109 @@ export default function Home() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              What We Do
+      <section className="py-24 bg-white relative">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Elegant Header */}
+          <div className="text-center mb-20">
+            <div className="inline-block mb-6">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mx-auto mb-2"></div>
+              <div className="text-sm font-semibold text-blue-600 tracking-widest uppercase">
+                Our Capabilities
+              </div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
+              What We <span className="font-semibold">Do</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               We deliver comprehensive AI solutions that transform how
               businesses operate, compete, and grow in the digital age.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Brain className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  AI Platform
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Custom AI solutions that automate processes, enhance
-                  decision-making, and unlock new revenue streams for your
-                  business.
-                </p>
-                {/* <Button
-                  variant="ghost"
-                  asChild
-                  className="group-hover:text-blue-600"
-                >
-                  <Link href="/services/ai-platform">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button> */}
-              </CardContent>
-            </Card>
+          {/* Sophisticated Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* AI Platform Card */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+              <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div className="p-10">
+                  {/* Elegant Icon */}
+                  <div className="mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                      <Brain className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
 
-            {/* <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <TrendingUp className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Finance Tools
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Advanced financial analytics and forecasting tools that
-                  provide real-time insights and strategic guidance for better
-                  decisions.
-                </p>
-                <Button
-                  variant="ghost"
-                  asChild
-                  className="group-hover:text-purple-600"
-                >
-                  <Link href="/services/finance-tools">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card> */}
+                  {/* Content */}
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
+                    AI Platform
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-8 text-lg font-light">
+                    Custom AI solutions that automate processes, enhance
+                    decision-making, and unlock new revenue streams for your
+                    business.
+                  </p>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Shield className="h-8 w-8 text-white" />
+                  {/* Subtle CTA */}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Expert Consulting
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Strategic guidance from industry experts to help you navigate
-                  digital transformation and maximize your technology
-                  investments.
-                </p>
-                {/* <Button
-                  variant="ghost"
-                  asChild
-                  className="group-hover:text-green-600"
-                >
-                  <Link href="/services/consulting">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button> */}
-              </CardContent>
-            </Card>
+
+                {/* Accent bar */}
+                <div className="h-1 bg-gradient-to-r from-blue-600 to-blue-700 w-full"></div>
+              </div>
+            </div>
+
+            {/* Expert Consulting Card */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+              <div className="relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div className="p-10">
+                  {/* Elegant Icon */}
+                  <div className="mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                      <Shield className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
+                    Expert Consulting
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-8 text-lg font-light">
+                    Strategic guidance from industry experts to help you
+                    navigate digital transformation and maximize your technology
+                    investments.
+                  </p>
+
+                  {/* Subtle CTA */}
+                </div>
+
+                {/* Accent bar */}
+                <div className="h-1 bg-gradient-to-r from-green-600 to-green-700 w-full"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Elegant CTA */}
+          <div className="text-center mt-20">
+            <div className="inline-flex items-center gap-6 px-8 py-4 bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="text-left">
+                <div className="text-sm text-gray-600 font-light">
+                  Ready to begin?
+                </div>
+                <div className="text-lg font-semibold text-gray-900">
+                  Let's discuss your project
+                </div>
+              </div>
+              <Link href="/contact">
+                <button className="px-8 py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-transform">
+                  Start Conversation
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
