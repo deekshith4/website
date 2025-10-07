@@ -9,12 +9,8 @@ import {
   Brain,
   TrendingUp,
   Shield,
-  Users,
   CircleCheck as CheckCircle,
-  Star,
-  Quote,
   Zap,
-  Sparkles,
 } from "lucide-react";
 
 export default function Home() {
