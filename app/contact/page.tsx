@@ -112,8 +112,8 @@ export default function Contact() {
                   Send us a Message
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Fill out the form below and we&apos;ll get back to you within 24
-                  hours.
+                  Fill out the form below and we&apos;ll get back to you within
+                  24 hours.
                 </p>
               </div>
 
@@ -135,8 +135,8 @@ export default function Contact() {
                         </span>
                       </div>
                       <p className="text-green-600 text-sm mt-1 ml-7">
-                        Thank you for your message. We&apos;ll get back to you within
-                        24 hours.
+                        Thank you for your message. We&apos;ll get back to you
+                        within 24 hours.
                       </p>
                     </div>
                   )}
@@ -356,7 +356,7 @@ export default function Contact() {
               {/* Map placeholder */}
             </div>
           </div>
-          <Card className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3 p-6">
+          <Card className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 p-6">
             <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
               <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
                 <iframe
