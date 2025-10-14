@@ -38,13 +38,24 @@ export default function Contact() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/send_mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // const response = await fetch("/api/send_mail", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
+
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/send_mail`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -288,7 +299,7 @@ export default function Contact() {
                         href="tel:+15551234567"
                         className="text-purple-600 hover:underline"
                       >
-                        --
+                        +91 9400031100
                       </a>
                     </div>
                   </div>
@@ -319,9 +330,11 @@ export default function Contact() {
                             R&D Center
                           </p>
                           <address className="text-green-600 not-italic text-sm">
-                            F-404, Tower F, AdarshLakefront Apartment,
+                            SAVANTEDGE INFOTECH PRIVATE LIMITED
                             <br />
-                            Bellandur, Bangalore - 560103
+                            #677, 1st Floor, Desk # 164B, 27th Main, 13th Cross,
+                            <br />
+                            HSR Layout, Sector 1, Bangalore - 560102
                             <br />
                             Karnataka, India
                           </address>
@@ -360,7 +373,7 @@ export default function Contact() {
             <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
               <div className="h-64 bg-gray-100 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.963734447534!2d77.6811112757792!3d12.918096987888007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzA1LjIiTiA3N8KwNDAnNTkuMiJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.028057769775!2d77.65057019789914!3d12.900641237829236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAyLjMiTiA3N8KwMzknMDIuMSJF!5e0!3m2!1sen!2sin!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -373,10 +386,11 @@ export default function Contact() {
             </div>
             <div className="mt-4 text-center">
               <p className="text-gray-500 font-medium">
-                SavantEdge Infotech Pvt. Ltd
+                SAVANTEDGE INFOTECH PRIVATE LIMITED
               </p>
               <p className="text-sm text-gray-400">
-                F-404, Tower F, Adarsh Lakefront Apartment, Bellandur, Bangalore
+                #677, 1st Floor, Desk # 164B, 27th Main, 13th Cross, HSR Layout,
+                Sector 1, Bangalore
               </p>
             </div>
           </Card>

@@ -29,7 +29,11 @@ export async function POST(request) {
       );
     }
 
-    if (!process.env.APP_USER || !process.env.APP_PASSWORD || !process.env.RECEIVER_MAIL) {
+    if (
+      !process.env.APP_USER ||
+      !process.env.APP_PASSWORD ||
+      !process.env.RECEIVER_MAIL
+    ) {
       console.error("Missing email configuration");
       return NextResponse.json(
         { error: "Email service is not configured properly" },
@@ -37,10 +41,19 @@ export async function POST(request) {
       );
     }
 
-
+    // const transporter = nodemailer.createTransport({
+    //   host: "smtp.ethereal.email",
+    //   port: 587,
+    //   auth: {
+    //     user: process.env.APP_USER,
+    //     pass: process.env.APP_PASSWORD,
+    //   },
+    // });
+    console.log("dk test", process.env.APP_USER, process.env.APP_PASSWORD);
     const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
+      host: "smtp.gmail.com",
       port: 587,
+      secure: false,
       auth: {
         user: process.env.APP_USER,
         pass: process.env.APP_PASSWORD,

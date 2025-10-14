@@ -2,12 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import {
-  Users,
-  Target,
-  Award,
-  Calendar,
-} from "lucide-react";
+import { Users, Target, Award, Calendar } from "lucide-react";
 
 export default function About() {
   return (
@@ -112,20 +107,17 @@ export default function About() {
               {
                 year: "2022",
                 title: "Company Founded",
-                description:
-                  "",
+                description: "",
               },
               {
                 year: "2024",
                 title: "First AI Platform Launch",
-                description:
-                  "",
+                description: "",
               },
               {
                 year: "2025",
                 title: "First Customer Acquired",
-                description:
-                  "",
+                description: "",
               },
             ].map((milestone, index) => (
               <div key={index} className="flex items-center space-x-8">
@@ -148,7 +140,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
 
       {/* Culture & Awards */}
       <section className="py-20 bg-gray-50">
@@ -224,8 +215,8 @@ export default function About() {
             Join Our Mission
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Whether you&apos;re looking to transform your business or join our team,
-            we&apos;d love to hear from you.
+            Whether you&apos;re looking to transform your business or join our
+            team, we&apos;d love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

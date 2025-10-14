@@ -7,12 +7,25 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Savant - AI-Powered Business Solutions",
+  title: "Tracient - AI-Powered Business Solutions",
   description:
     "Transform your business with cutting-edge AI solutions, expert consulting, and innovative technology platforms.",
   icons: {
     icon: "/images/logo.jpeg",
-    apple: "/images/logo.jpeg"
+    apple: "/images/logo.jpeg",
+  },
+  openGraph: {
+    title: "Tracient - AI-Powered Business Solutions",
+    description: "Transform your business with cutting-edge AI solutions",
+    url: "https://tracient.io",
+    siteName: "Tracient",
+    images: [
+      {
+        url: "/images/logo.jpeg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 

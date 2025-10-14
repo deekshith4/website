@@ -71,7 +71,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4" />
-                <span>--</span>
+                <span>+91 9400031100</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <MapPin className="h-4 w-4" />
@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-gray-400">
-            © 2025 Savant. All rights reserved.
+            © 2025 Savant Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-400">
             <Link
