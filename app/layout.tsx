@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tracient.io"),
   title: "Tracient - AI-Powered Business Solutions",
   description:
     "Transform your business with cutting-edge AI solutions, expert consulting, and innovative technology platforms.",
