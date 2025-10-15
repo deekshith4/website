@@ -2,15 +2,79 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
-import {
-  ArrowRight,
-  Brain,
-  TrendingUp,
-  Shield,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Brain, TrendingUp, Shield, Zap } from "lucide-react";
 
 export default function Home() {
+  interface ImageCard {
+    src: string;
+    alt: string;
+    gradient: string;
+    shadow: string;
+  }
+
+  const imageCards: ImageCard[] = [
+    {
+      src: "/images/img_1.png",
+      alt: "AI Analytics",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      shadow: "shadow-cyan-500/25",
+    },
+    {
+      src: "/images/img_2.png",
+      alt: "Real-time Monitoring",
+      gradient: "from-purple-500/20 to-pink-500/20",
+      shadow: "shadow-purple-500/25",
+    },
+    {
+      src: "/images/img_3.png",
+      alt: "Predictive Analytics",
+      gradient: "from-green-500/20 to-emerald-500/20",
+      shadow: "shadow-green-500/25",
+    },
+    {
+      src: "/images/img_4.png",
+      alt: "Data Visualization",
+      gradient: "from-orange-500/20 to-red-500/20",
+      shadow: "shadow-orange-500/25",
+    },
+    {
+      src: "/images/img_5.png",
+      alt: "Machine Learning",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      shadow: "shadow-cyan-500/25",
+    },
+    {
+      src: "/images/img_6.png",
+      alt: "IoT Integration",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      shadow: "shadow-pink-500/25",
+    },
+    {
+      src: "/images/img_7.png",
+      alt: "Machine Learning",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      shadow: "shadow-cyan-500/25",
+    },
+    {
+      src: "/images/img_8.png",
+      alt: "IoT Integration",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      shadow: "shadow-pink-500/25",
+    },
+    {
+      src: "/images/img_9.png",
+      alt: "Machine Learning",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      shadow: "shadow-cyan-500/25",
+    },
+    {
+      src: "/images/img_10.png",
+      alt: "IoT Integration",
+      gradient: "from-pink-500/20 to-rose-500/20",
+      shadow: "shadow-pink-500/25",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
@@ -39,9 +103,8 @@ export default function Home() {
               <p className="text-xl text-purple-100 leading-relaxed">
                 At Savant Solutions, we understand the critical importance of
                 keeping your operations running smoothly and eliminating
-                unplanned downtime. That&apos;s why we built Tracient specifically
-                for small and medium-sized businesses, guided by four core
-                principles:
+                unplanned downtime. Tracient is specifically for small and
+                medium-sized businesses, guided by four core principles:
               </p>
 
               <div className="space-y-6">
@@ -54,19 +117,28 @@ export default function Home() {
                   ].map((principle, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300"
+                      className="flex bold items-center gap-3 group hover:translate-x-2 transition-transform duration-300"
                     >
                       <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
                         <span className="text-white text-sm font-bold">
                           {principle.number}
                         </span>
                       </div>
-                      <span className="text-purple-100 font-medium group-hover:text-white transition-colors">
+                      <span className="text-purple-100 font-bold group-hover:text-white transition-colors">
                         {principle.title}
                       </span>
                     </div>
                   ))}
                 </div>
+                {/* <div className="text-center pt-2">
+                  <Link
+                    href="/features"
+                    className="group inline-flex items-center gap-3 text-white font-bold hover:underline underline-offset-4 transition-all duration-300"
+                  >
+                    Explore All Features
+                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div> */}
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -102,90 +174,41 @@ export default function Home() {
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
+
+                <Button
+                  size="lg"
+                  asChild
+                  variant="outline"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <Link href="/features" className="flex items-center gap-2">
+                    Explore All Features
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center h-full min-h-[600px] lg:min-h-[700px]">
+            <div className="relative flex items-start justify-center h-full min-h-[600px] lg:min-h-[700px]">
               <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
-                {/* Row 1 */}
-                <div className="relative group">
-                  <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
-                    <Image
-                      src="/images/img_1.png"
-                      alt="AI Analytics"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                {imageCards.map((image, index) => (
+                  <div key={index} className="relative group">
+                    <div
+                      className={`absolute bg-gradient-to-r ${image.gradient} rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                    ></div>
+                    <div
+                      className={`relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform group-hover:rotate-0 transition-all duration-500 group-hover:${image.shadow} h-40`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={200}
+                        height={160}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
-                </div>
-
-                <div className="relative group ">
-                  <div className="absolute  bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-purple-500/25 h-40">
-                    <Image
-                      src="/images/img_2.png"
-                      alt="Real-time Monitoring"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="relative group ">
-                  <div className="absolute bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-green-500/25 h-40">
-                    <Image
-                      src="/images/img_3.png"
-                      alt="Predictive Analytics"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 2 */}
-                <div className="relative group ">
-                  <div className="absolute  bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-orange-500/25 h-40">
-                    <Image
-                      src="/images/img_4.png"
-                      alt="Data Visualization"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="relative group ">
-                  <div className="absolute  bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-cyan-500/25 h-40">
-                    <Image
-                      src="/images/img_5.png"
-                      alt="Machine Learning"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-
-                <div className="relative group">
-                  <div className="absolute  bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 overflow-hidden transform  group-hover:rotate-0 transition-all duration-500 group-hover:shadow-pink-500/25 h-40">
-                    <Image
-                      src="/images/img_6.png"
-                      alt="IoT Integration"
-                      width={200}
-                      height={160}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
 
               {/* Floating Icons - Adjusted Positions */}

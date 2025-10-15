@@ -7,10 +7,39 @@ import {
   Phone,
   MapPin,
   ArrowRight,
+  HelpCircle,
 } from "lucide-react";
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Card } from "@/components/ui/card";
 
 export function Footer() {
+  const faqs = [
+    {
+      question: "How long does a typical AI implementation take?",
+      answer: "Implementation timelines vary based on project complexity, but most projects are completed within 3-6 months from discovery to deployment.",
+    },
+    {
+      question: "Do you work with small businesses or just enterprises?",
+      answer: "We work with businesses of all sizes. Our solutions are scalable and can be tailored to fit different budgets and requirements.",
+    },
+    {
+      question: "What kind of support do you provide after implementation?",
+      answer: "We offer comprehensive ongoing support including monitoring, optimization, training, and 24/7 technical assistance.",
+    },
+    {
+      question: "Can you integrate with our existing systems?",
+      answer: "Yes, our solutions are designed to integrate seamlessly with most existing business systems and workflows.",
+    },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -49,17 +78,80 @@ export function Footer() {
               >
                 About Us
               </Link>
+               <Link
+                href="/features"
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Features
+              </Link>
               <Link
                 href="/contact"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Contact
               </Link>
+              {/* FAQ Link */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
+                    <HelpCircle className="h-4 w-4" />
+                    <span>FAQ</span>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold text-gray-900">
+                      Frequently Asked Questions
+                    </DialogTitle>
+                    <DialogDescription className="text-lg text-gray-600">
+                      Quick answers to common questions about our services and process.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-6 mt-6">
+                    {faqs.map((faq, index) => (
+                      <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                        <h3 className="font-semibold text-gray-900 text-lg mb-3">
+                          {faq.question}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                      </Card>
+                    ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
           {/* Services */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
+            {/* <h3 className="text-lg font-semibold">Services</h3>
+            <div className="space-y-2">
+              <Link
+                href="/services/ai-solutions"
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                AI Solutions
+              </Link>
+              <Link
+                href="/services/consulting"
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Consulting
+              </Link>
+              <Link
+                href="/services/implementation"
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Implementation
+              </Link>
+              <Link
+                href="/services/support"
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Support & Maintenance
+              </Link>
+            </div> */}
+          </div>
 
           {/* Contact & Newsletter */}
           <div className="space-y-4">
@@ -78,21 +170,6 @@ export function Footer() {
                 <span>Bangalore, Karnataka, India</span>
               </div>
             </div>
-
-            {/* <div className="space-y-2">
-              <p className="text-sm text-gray-400">
-                Subscribe to our newsletter
-              </p>
-              <div className="flex space-x-2">
-                <Input
-                  placeholder="Enter your email"
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                />
-                <Button size="sm" variant="secondary">
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </div>
-            </div> */}
           </div>
         </div>
 

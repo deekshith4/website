@@ -38,14 +38,6 @@ export default function Contact() {
     setErrorMessage("");
 
     try {
-      // const response = await fetch("/api/send_mail", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
-
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/send_mail`,
         {
@@ -90,20 +82,19 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-6">
             <Badge variant="secondary" className="mx-auto w-fit">
               Get in Touch
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
               Let&apos;s Build Something{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Amazing Together
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Ready to transform your business with AI? Schedule a demo or get
               in touch with our team to discuss your specific needs and
               challenges.
@@ -112,11 +103,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Options */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-gray-900">
@@ -136,7 +125,6 @@ export default function Contact() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {/* Status Messages */}
                   {submitStatus === "success" && (
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                       <div className="flex items-center space-x-2">
@@ -394,54 +382,6 @@ export default function Contact() {
               </p>
             </div>
           </Card>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to common questions about our services and process.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              {
-                question: "How long does a typical AI implementation take?",
-                answer:
-                  "Implementation timelines vary based on project complexity, but most projects are completed within 3-6 months from discovery to deployment.",
-              },
-              {
-                question:
-                  "Do you work with small businesses or just enterprises?",
-                answer:
-                  "We work with businesses of all sizes. Our solutions are scalable and can be tailored to fit different budgets and requirements.",
-              },
-              {
-                question:
-                  "What kind of support do you provide after implementation?",
-                answer:
-                  "We offer comprehensive ongoing support including monitoring, optimization, training, and 24/7 technical assistance.",
-              },
-              {
-                question: "Can you integrate with our existing systems?",
-                answer:
-                  "Yes, our solutions are designed to integrate seamlessly with most existing business systems and workflows.",
-              },
-            ].map((faq, index) => (
-              <Card key={index} className="p-6">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
     </div>

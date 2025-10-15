@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Clock, 
-  TrendingUp, 
-  CheckCircle, 
+import {
+  Clock,
+  TrendingUp,
+  CheckCircle,
   Database,
   Shield,
   Zap,
   BarChart3,
-  Settings
+  Settings,
 } from "lucide-react";
 
 export default function AppFeatures() {
@@ -16,66 +16,70 @@ export default function AppFeatures() {
     {
       icon: Clock,
       title: "Maximize Equipment Uptime",
-      description: "Reduce downtime with predictive maintenance and real-time monitoring",
+      description:
+        "Reduce downtime with predictive maintenance and real-time monitoring",
       points: [
         "Predictive maintenance alerts",
         "Real-time equipment monitoring",
         "Automated maintenance scheduling",
-        "Performance analytics dashboard"
+        "Performance analytics dashboard",
       ],
       gradient: "from-blue-500 to-blue-600",
       bgGradient: "from-blue-50 to-blue-100",
-      delay: "0"
+      delay: "0",
     },
     {
       icon: TrendingUp,
       title: "Improve Yield",
-      description: "Optimize production processes and increase output efficiency",
+      description:
+        "Optimize production processes and increase output efficiency",
       points: [
         "Production optimization algorithms",
         "Real-time yield tracking",
         "Process efficiency analysis",
-        "Bottleneck identification"
+        "Bottleneck identification",
       ],
       gradient: "from-green-500 to-green-600",
       bgGradient: "from-green-50 to-green-100",
-      delay: "200"
+      delay: "200",
     },
     {
       icon: CheckCircle,
       title: "Enhance Product Quality",
-      description: "Maintain consistent quality standards with AI-powered insights",
+      description:
+        "Maintain consistent quality standards with AI-powered insights",
       points: [
         "Quality control automation",
         "Defect detection systems",
         "Consistency monitoring",
-        "Quality trend analysis"
+        "Quality trend analysis",
       ],
       gradient: "from-purple-500 to-purple-600",
       bgGradient: "from-purple-50 to-purple-100",
-      delay: "400"
+      delay: "400",
     },
     {
       icon: Database,
       title: "Ensure Data Traceability",
-      description: "Complete audit trails and real-time data tracking across operations",
+      description:
+        "Complete audit trails and real-time data tracking across operations",
       points: [
         "End-to-end audit trails",
         "Real-time data tracking",
         "Compliance reporting",
-        "Supply chain visibility"
+        "Supply chain visibility",
       ],
       gradient: "from-orange-500 to-orange-600",
       bgGradient: "from-orange-50 to-orange-100",
-      delay: "600"
-    }
+      delay: "600",
+    },
   ];
 
   const stats = [
     { value: "99.5%", label: "Average Uptime", icon: Shield },
     { value: "15%", label: "Yield Improvement", icon: Zap },
     { value: "98%", label: "Quality Score", icon: CheckCircle },
-    { value: "100%", label: "Data Traceability", icon: Database }
+    { value: "100%", label: "Data Traceability", icon: Database },
   ];
 
   return (
@@ -107,8 +111,8 @@ export default function AppFeatures() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Leverage AI-powered insights to optimize your manufacturing processes, 
-              improve efficiency, and drive sustainable growth.
+              Leverage AI-powered insights to optimize your manufacturing
+              processes, improve efficiency, and drive sustainable growth.
             </p>
           </div>
         </div>
@@ -123,10 +127,59 @@ export default function AppFeatures() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+                <div className="text-3xl font-bold text-gray-900">
+                  {stat.value}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Parallax Image Section */}
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-fixed bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url("/images/smart-manf.png")',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <div className="space-y-6">
+            <Badge
+              variant="secondary"
+              className="bg-white/20 text-white border-white/30"
+            >
+              Powered by AI Intelligence
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Transform Industrial Operations with Tracient
+            </h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+              Tracient brings together artificial intelligence, IoT, and
+              advanced analytics to help manufacturers predict, optimize, and
+              evolve — enabling smarter, more resilient production systems built
+              for the future.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 pt-6">
+              {[
+                "AI-Driven Insights",
+                "Predictive Intelligence",
+                "Connected Ecosystems",
+                "Next-Gen Automation",
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium"
+                >
+                  {tech}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -139,42 +192,64 @@ export default function AppFeatures() {
               Core Features
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions designed to address your key manufacturing challenges
+              Comprehensive solutions designed to address your key manufacturing
+              challenges
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <Card 
+              <Card
                 key={index}
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden group"
               >
-                <CardContent className="p-8">
+                {/* Background Gradient Effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                ></div>
+
+                <CardContent className="p-8 relative z-10">
                   <div className="flex items-start space-x-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center flex-shrink-0`}>
-                      <feature.icon className="h-8 w-8 text-white" />
+                    <div
+                      className={`w-20 h-20 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
+                      <feature.icon className="h-10 w-10 text-white" />
                     </div>
-                    
+
                     <div className="flex-1 space-y-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
                           {feature.description}
                         </p>
                       </div>
-                      
+
                       <ul className="space-y-3">
                         {feature.points.map((point, pointIndex) => (
-                          <li key={pointIndex} className="flex items-center space-x-3">
-                            <div className={`w-2 h-2 bg-gradient-to-r ${feature.gradient} rounded-full`}></div>
-                            <span className="text-gray-700">{point}</span>
+                          <li
+                            key={pointIndex}
+                            className="flex items-center space-x-3 group-hover:translate-x-1 transition-transform duration-300"
+                          >
+                            <div
+                              className={`w-3 h-3 bg-gradient-to-r ${feature.gradient} rounded-full flex items-center justify-center flex-shrink-0 shadow-sm`}
+                            >
+                              <div className="w-1 h-1 bg-white rounded-full"></div>
+                            </div>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
+                              {point}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
+
+                  {/* Hover Border Effect */}
+                  <div
+                    className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${feature.gradient} group-hover:w-full transition-all duration-500`}
+                  ></div>
                 </CardContent>
               </Card>
             ))}
@@ -182,7 +257,6 @@ export default function AppFeatures() {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -193,7 +267,8 @@ export default function AppFeatures() {
                   Drive Operational Excellence
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Our platform delivers measurable results across your entire manufacturing operation.
+                  Our platform delivers measurable results across your entire
+                  manufacturing operation.
                 </p>
               </div>
 
@@ -207,7 +282,8 @@ export default function AppFeatures() {
                       Real-time Analytics
                     </h3>
                     <p className="text-gray-600">
-                      Make data-driven decisions with comprehensive dashboards and real-time insights.
+                      Make data-driven decisions with comprehensive dashboards
+                      and real-time insights.
                     </p>
                   </div>
                 </div>
@@ -221,7 +297,8 @@ export default function AppFeatures() {
                       Automated Optimization
                     </h3>
                     <p className="text-gray-600">
-                      AI algorithms continuously optimize processes for maximum efficiency and quality.
+                      AI algorithms continuously optimize processes for maximum
+                      efficiency and quality.
                     </p>
                   </div>
                 </div>
@@ -235,7 +312,8 @@ export default function AppFeatures() {
                       Proactive Maintenance
                     </h3>
                     <p className="text-gray-600">
-                      Prevent equipment failures before they happen with predictive maintenance alerts.
+                      Prevent equipment failures before they happen with
+                      predictive maintenance alerts.
                     </p>
                   </div>
                 </div>
@@ -253,7 +331,7 @@ export default function AppFeatures() {
                   <div className="w-full bg-blue-400 rounded-full h-2">
                     <div className="bg-white h-2 rounded-full w-3/4"></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span>Quality Improvement</span>
                     <span className="font-bold">+18%</span>
@@ -261,7 +339,7 @@ export default function AppFeatures() {
                   <div className="w-full bg-blue-400 rounded-full h-2">
                     <div className="bg-white h-2 rounded-full w-2/3"></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span>Downtime Reduction</span>
                     <span className="font-bold">-45%</span>
@@ -271,7 +349,7 @@ export default function AppFeatures() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full animate-pulse animation-delay-1000"></div>
@@ -289,11 +367,17 @@ export default function AppFeatures() {
               Ready to Transform Your Manufacturing?
             </h2>
             <p className="text-xl text-gray-600">
-              Our platform integrates with your existing systems to provide immediate value without disrupting your operations.
+              Our platform integrates with your existing systems to provide
+              immediate value without disrupting your operations.
             </p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
-              {['ERP Systems', 'MES Platforms', 'SCADA Systems', 'IoT Devices'].map((system, index) => (
+              {[
+                "ERP Systems",
+                "MES Platforms",
+                "SCADA Systems",
+                "IoT Devices",
+              ].map((system, index) => (
                 <div key={index} className="text-center">
                   <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                     <Database className="h-6 w-6 text-gray-600" />

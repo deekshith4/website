@@ -7,7 +7,7 @@ import { Users, Target, Award, Calendar } from "lucide-react";
 export default function About() {
   return (
     <div className="min-h-screen">
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-12 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -17,22 +17,22 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-white/80 to-purple-50/90"></div>
         </div>
 
-        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-10 right-10 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-10 left-20 w-20 h-20 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-6 left-6 w-16 h-16 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-6 right-6 w-16 h-16 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-6 left-12 w-16 h-16 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-6">
             <Badge variant="secondary" className="mx-auto w-fit">
               About Savant
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
               Building the Future of{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Business Intelligence
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Founded in 2022, Savant has been at the forefront of AI
               innovation, helping businesses transform their operations and
               achieve unprecedented growth.
@@ -91,117 +91,149 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-12">
+            <Badge variant="secondary" className="mx-auto w-fit">
+              Our Story
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our Journey
+              Our Journey & Culture
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Key milestones that shaped our company and defined our impact
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From humble beginnings to shaping the future of business
+              intelligence
             </p>
           </div>
 
-          <div className="space-y-8">
-            {[
-              {
-                year: "2022",
-                title: "Company Founded",
-                description: "",
-              },
-              {
-                year: "2024",
-                title: "First AI Platform Launch",
-                description: "",
-              },
-              {
-                year: "2025",
-                title: "First Customer Acquired",
-                description: "",
-              },
-            ].map((milestone, index) => (
-              <div key={index} className="flex items-center space-x-8">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                    <Calendar className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-4 mb-2">
-                    <Badge variant="secondary">{milestone.year}</Badge>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {milestone.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600">{milestone.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Culture & Awards */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Culture */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Timeline Section */}
             <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Our Culture
-                </h2>
-                <p className="text-xl text-gray-600">
-                  We foster an environment of innovation, collaboration, and
-                  continuous learning.
+              <div className="text-left mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  Milestones
+                </h3>
+                <p className="text-gray-600">
+                  Key moments that defined our growth and impact
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">
-                      Collaborative Excellence
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Cross-functional teams working together to solve complex
-                      challenges
-                    </p>
-                  </div>
-                </div>
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Target className="h-5 w-5 text-purple-600" />
+                {[
+                  {
+                    year: "2022",
+                    title: "Company Founded",
+                    description:
+                      "Started with a vision to democratize AI for businesses of all sizes",
+                    icon: "🚀",
+                  },
+                  {
+                    year: "2024",
+                    title: "First AI Platform Launch",
+                    description:
+                      "Released our flagship intelligence platform",
+                    icon: "🎯",
+                  },
+                  {
+                    year: "2025",
+                    title: "First Enterprise Customer",
+                    description:
+                      "Onboarded our first Fortune client",
+                    icon: "🏆",
+                  },
+                ].map((milestone, index) => (
+                  <div
+                    key={index}
+                    className="relative flex items-start space-x-6 mb-8 last:mb-0 group"
+                  >
+                    <div className="flex-shrink-0 relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-2xl">{milestone.icon}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <div className="flex items-center space-x-4 mb-3">
+                        <Badge
+                          variant="secondary"
+                          className="bg-blue-100 text-blue-700"
+                        >
+                          {milestone.year}
+                        </Badge>
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {milestone.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed">
+                        {milestone.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">
-                      Innovation First
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      20% time for personal projects and exploring new
-                      technologies
-                    </p>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="h-5 w-5 text-green-600" />
+            {/* Culture Section */}
+            <div className="space-y-8">
+              <div className="text-left mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  Our Culture
+                </h3>
+                <p className="text-gray-600">
+                  The values that drive our innovation and success
+                </p>
+              </div>
+
+              <div className="grid gap-6">
+                {[
+                  {
+                    icon: <Users className="h-6 w-6 text-blue-600" />,
+                    title: "Collaborative Excellence",
+                    description:
+                      "Cross-functional teams working together to solve complex challenges and deliver exceptional results",
+                    gradient: "from-blue-500 to-blue-600",
+                  },
+                  {
+                    icon: <Target className="h-6 w-6 text-purple-600" />,
+                    title: "Innovation First",
+                    description:
+                      "Dedicated time for research, experimentation, and exploring cutting-edge technologies",
+                    gradient: "from-purple-500 to-purple-600",
+                  },
+                  {
+                    icon: <Award className="h-6 w-6 text-green-600" />,
+                    title: "Growth Mindset",
+                    description:
+                      "Continuous learning, professional development, and career advancement opportunities",
+                    gradient: "from-green-500 to-green-600",
+                  },
+                ].map((value, index) => (
+                  <div
+                    key={index}
+                    className="group p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 hover:border-transparent transition-all duration-300"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-r ${value.gradient} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        {/* Force white color on the icon */}
+                        <div className="text-white [&>svg]:text-white">
+                          {value.icon}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 text-lg mb-2 group-hover:text-gray-800 transition-colors">
+                          {value.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {value.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">
-                      Growth Mindset
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Continuous learning budget and conference attendance for
-                      all team members
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
